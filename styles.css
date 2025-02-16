@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+    margin: 0; /* Remove default body margins */
+    background-image: url('https://www.easygifanimator.net/images/samples/video-to-gif-sample.gif'); /* Replace with your background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif; /* Add a default font */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img#diaryImage {
+    cursor: pointer;
+    max-width: 900px; /* Use max-width to prevent overflow */
+    height: auto;
+    display: block; /* Prevents extra space below the image */
+    border: 2px solid #ccc; /* Add a subtle border */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2); /* Add a shadow */
+}
