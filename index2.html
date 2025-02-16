@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Image Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>My Diary</h1>
+    <p>Touch the diary to read:</p>
+
+    <img id="diaryImage" src="https://owenkcstephens.com/wp-content/uploads/2022/02/rise-and-fold-aleroom-by-ig-digital-arts.jpg" alt="Diary Image" onclick="openDiaryPage()">
+
+    <script>
+        const pages = [
+            'https://cdn.discordapp.com/attachments/1319371972232216576/1340473735353864324/old_book1.png?ex=67b27cf3&is=67b12b73&hm=db4fb378c57be23692628a7bcc50afa06e012e6f33aabe4bc558270217f5eb87&=&format=webp&quality=lossless&width=391&height=257',
+            'https://cdn.discordapp.com/attachments/1319371972232216576/1340473735848657046/old_book2.png?ex=67b27cf3&is=67b12b73&hm=2af6b475ba054f1f753c1374210f39e53b9d3dbbaa8c58679788261c86ed318e&=&format=webp&quality=lossless&width=394&height=257',
+            'https://cdn.discordapp.com/attachments/1319371972232216576/1340473736255766620/old_book3.png?ex=67b27cf3&is=67b12b73&hm=535142bf7708ce284317c9541f824649ca2fb85c7273eef4b9d4b8b01ef388cd&=&format=webp&quality=lossless&width=394&height=257',
+            'https://cdn.discordapp.com/attachments/1319371972232216576/1340473736624869376/old_book4.png?ex=67b27cf3&is=67b12b73&hm=3de600dbc108d0b714642dcf4380d6d6c282438f4c6a1d480e5111f43f4c1c81&=&format=webp&quality=lossless&width=397&height=257'
+        ];
+        let currentPage = 0;
+
+        function openDiaryPage() {
+            document.getElementById('diaryImage').src = pages[currentPage];
+            currentPage = (currentPage + 1) % pages.length;
+        }
+    </script>
+
+</body>
+</html>
